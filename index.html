@@ -4,176 +4,251 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mais Sabiamente — Curadoria Inteligente</title>
-  <meta name="description" content="Curadoria prática de bem-estar, livros, tecnologia e relaxamento. Conteúdo organizado, links de afiliados e páginas especiais (Alva dentro de Cuidados Diários)." />
+  <meta name="description" content="Curadoria prática de bem-estar, tecnologia, livros e relaxamento. Alva dentro de 'Cuidados Diários'." />
   <meta name="author" content="Patty Kelly" />
   <!-- Open Graph -->
   <meta property="og:title" content="Mais Sabiamente — Curadoria Inteligente" />
-  <meta property="og:description" content="Curadoria prática de bem-estar, livros, tecnologia e relaxamento." />
+  <meta property="og:description" content="Seleções e recomendações práticas organizadas por categorias." />
   <meta property="og:type" content="website" />
-  <!-- Favicon & logo (colocar assets/favicon.png opcional) -->
-  <link rel="icon" href="assets/favicon.png" />
-  <!-- Font -->
+  <meta property="og:image" content="assets/hero.jpg" />
+  <link rel="icon" href="assets/logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Analytics placeholder (coloque seu GA4 G-XXXX aqui se quiser) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');</script> -->
+  <!-- Structured data (Organization) -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Mais Sabiamente","url":"https://pattykelly.github.io/NovoSitePy/","logo":"assets/logo.png"}
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="wrap">
       <a class="brand" href="/">
-        <img src="assets/logo.png" alt="Mais Sabiamente" class="brand-logo" />
-        <span class="brand-title">Mais Sabiamente</span>
+        <img src="assets/logo.png" alt="Mais Sabiamente — logo" class="brand-logo" />
+        <div class="brand-text">
+          <strong>Mais Sabiamente</strong>
+          <small>Curadoria prática</small>
+        </div>
       </a>
 
-      <nav class="main-nav" aria-label="Menu principal">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li class="has-dropdown">
-            <a href="#">Cuidados Diários ▾</a>
-            <ul class="dropdown">
-              <li><a href="#cuidados-alva">Alva</a></li>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li class="nav-item has-sub">
+            <button class="sub-toggle" aria-expanded="false">Cuidados Diários ▾</button>
+            <ul class="sub-menu" aria-label="submenu Cuidados Diários">
+              <li><a href="#alva">Alva</a></li>
               <li><a href="#cuidados-geral">Dicas Gerais</a></li>
             </ul>
           </li>
           <li><a href="#tecnologia">Tecnologia</a></li>
           <li><a href="#livros">Livros</a></li>
           <li><a href="#saude">Saúde</a></li>
-          <li><a href="#canais">Canais Interessantes</a></li>
-          <li><a href="#contato" class="btn-cta">Contato</a></li>
+          <li><a href="#canais">Canais</a></li>
+          <li><a href="#contato" class="cta">Contato</a></li>
         </ul>
       </nav>
-
-      <button class="mobile-toggle" aria-label="Abrir menu">☰</button>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="wrap hero-grid">
         <div class="hero-copy">
-          <h1>Curadoria prática para o seu dia a dia.</h1>
-          <p>Artigos, recomendações e seleções de produtos em categorias — Cuidado Diário, Tecnologia, Livros e Relaxamento.</p>
-          <p><a href="#cuidados-alva" class="btn-primary">Conheça Alva — dentro de Cuidados Diários</a></p>
+          <h1>Curadoria prática para o seu dia a dia</h1>
+          <p class="lead">Guias, produtos e leituras selecionadas para simplificar rotina, bem-estar e lazer. Tudo organizado por categoria — com a marca <strong>Alva</strong> dentro de <em>Cuidados Diários</em>.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#alva">Conheça Alva</a>
+            <a class="btn btn-outline" href="#livros">Nossas leituras</a>
+          </div>
+          <ul class="hero-features">
+            <li>Recomendações testadas</li>
+            <li>Links rastreáveis e afiliados</li>
+            <li>Conteúdo prático e direto</li>
+          </ul>
         </div>
-        <div class="hero-media">
-          <img src="assets/hero.jpg" alt="Mais Sabiamente — Curadoria" />
-        </div>
+
+        <figure class="hero-media">
+          <img src="assets/hero.jpg" alt="Hero — curadoria Mais Sabiamente" />
+        </figure>
       </div>
     </section>
 
-    <section id="cuidados-alva" class="section">
-      <div class="container">
-        <h2>Cuidados Diários — Alva</h2>
-        <p class="muted">Conteúdo Alva — todos os itens da marca Alva ficam aqui como solicitado.</p>
+    <!-- ALVA (dentro de Cuidados Diários) -->
+    <section id="alva" class="section section--accent">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Cuidados Diários — Alva</h2>
+          <p class="muted">Conteúdo e produtos da linha Alva — todos centralizados aqui como solicitado.</p>
+        </div>
 
         <div class="cards">
           <article class="card">
             <img src="assets/thumb-alva-1.jpg" alt="Alva - Cuidado Diário" />
-            <h3>Alva — Rotina Essencial</h3>
-            <p>Resumo curto do produto/conteúdo com link de afiliado opcional.</p>
-            <p><a class="card-link" href="#">Leia mais</a></p>
+            <div class="card-body">
+              <h3>Rotina Essencial Alva</h3>
+              <p>Como usar — passos simples para incorporar os produtos Alva na sua rotina diária.</p>
+              <a class="card-cta" href="#">Ver detalhes</a>
+            </div>
           </article>
 
           <article class="card">
-            <img src="assets/thumb-alva-2.jpg" alt="Alva - Produtos" />
-            <h3>Alva — Top 5 recomendações</h3>
-            <p>Breve descrição e chamadas para ação.</p>
-            <p><a class="card-link" href="#">Ver lista</a></p>
+            <img src="assets/thumb-alva-2.jpg" alt="Alva - Top produtos" />
+            <div class="card-body">
+              <h3>Top 5 Alva</h3>
+              <p>Produtos mais indicados, com prós, contras e recomendações de uso.</p>
+              <a class="card-cta" href="#">Ver lista</a>
+            </div>
           </article>
+
+          <aside class="card highlight">
+            <h3>Receba novidades</h3>
+            <p>Assine nossa newsletter (simples e sem spam).</p>
+            <form class="newsletter" onsubmit="event.preventDefault(); alert('Obrigado — inscrito!')">
+              <input type="email" placeholder="seu-email@exemplo.com" aria-label="Email" required>
+              <button class="btn">Inscrever</button>
+            </form>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section id="tecnologia" class="section alt">
-      <div class="container">
+    <!-- Tecnologia -->
+    <section id="tecnologia" class="section">
+      <div class="wrap">
         <h2>Tecnologia</h2>
+        <p class="muted">Ferramentas, apps e recomendações práticas para facilitar seu dia.</p>
+
         <div class="grid-3">
-          <article class="mini-card">
-            <h4>Apps e utilitários</h4>
-            <p>Ferramentas que uso e recomendo.</p>
+          <article class="mini">
+            <h4>Apps</h4>
+            <p>Dicas e tutoriais rápidos.</p>
           </article>
-          <article class="mini-card">
+          <article class="mini">
             <h4>Hardware</h4>
-            <p>Dicas de compra e reviews.</p>
+            <p>Guias de compra direto ao ponto.</p>
           </article>
-          <article class="mini-card">
-            <h4>Tutoriais</h4>
-            <p>Guias rápidos e práticos.</p>
+          <article class="mini">
+            <h4>Segurança</h4>
+            <p>Boas práticas simples para proteger seus dados.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="livros" class="section">
-      <div class="container">
+    <!-- Livros -->
+    <section id="livros" class="section section--cards">
+      <div class="wrap">
         <h2>Livros</h2>
-        <p>Recomendações de leitura organizadas por tema.</p>
+        <p class="muted">Seleções por tema — leituras que valem tempo.</p>
+
         <div class="cards small">
           <article class="card">
-            <img src="assets/book-1.jpg" alt="Livro 1"/>
-            <h3>Livro destaque</h3>
-            <p>Descrição curta</p>
+            <img src="assets/book-1.jpg" alt="Livro 1">
+            <div class="card-body">
+              <h3>Livro destaque</h3>
+              <p>Resumo e por que recomendamos.</p>
+            </div>
           </article>
+
           <article class="card">
-            <img src="assets/book-2.jpg" alt="Livro 2"/>
-            <h3>Outro livro</h3>
-            <p>Descrição curta</p>
+            <img src="assets/book-2.jpg" alt="Livro 2">
+            <div class="card-body">
+              <h3>Outro livro</h3>
+              <p>Resumo curto.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Saúde -->
     <section id="saude" class="section alt">
-      <div class="container">
+      <div class="wrap">
         <h2>Saúde & Bem-estar</h2>
-        <p>Dicas, rotinas e práticas recomendadas.</p>
+        <p class="muted">Rotinas, práticas e conteúdo para qualidade de vida.</p>
       </div>
     </section>
 
+    <!-- Canais -->
     <section id="canais" class="section">
-      <div class="container">
+      <div class="wrap">
         <h2>Canais Interessantes</h2>
-        <p>Curadoria de canais em vídeo, podcasts e blogs.</p>
+        <p class="muted">Podcasts, YouTube e blogs que acompanhamos.</p>
+        <ul class="channel-list">
+          <li><a href="#" target="_blank" rel="noopener">Canal X — conteúdo prático</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Podcast Y — entrevistas</a></li>
+        </ul>
       </div>
     </section>
 
+    <!-- Contato -->
     <section id="contato" class="section contact">
-      <div class="container">
-        <h2>Fale comigo</h2>
-        <p>Use o e-mail: <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a></p>
+      <div class="wrap">
+        <div class="contact-grid">
+          <div>
+            <h2>Fale conosco</h2>
+            <p class="muted">Dúvidas, parcerias ou pauta? Mande um e-mail.</p>
+            <p><strong>Email:</strong> <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a></p>
+            <p><strong>Instagram:</strong> <a href="#" target="_blank">@mais_sabiamente</a></p>
+          </div>
+
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada — obrigado!')">
+            <label>Nome <input required></label>
+            <label>Email <input type="email" required></label>
+            <label>Mensagem <textarea rows="5" required></textarea></label>
+            <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-left">
-        <strong>Mais Sabiamente</strong><br />
-        Curadoria prática — © Patty
+    <div class="wrap footer-grid">
+      <div>
+        <strong>Mais Sabiamente</strong><br>
+        Curadoria prática • © Patty
       </div>
-      <div class="footer-right">
-        <nav>
-          <a href="#">Política de Privacidade</a> • <a href="#">Termos</a>
-        </nav>
-      </div>
+      <nav class="footer-nav">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </div>
   </footer>
 
+  <!-- small JS: nav toggles and accessibility -->
   <script>
-    // mobile menu toggle
-    const btn = document.querySelector('.mobile-toggle');
-    const nav = document.querySelector('.main-nav');
-    btn && btn.addEventListener('click', ()=> {
-      nav.classList.toggle('open');
-    });
-    // simple dropdown support (hover works for desktop via CSS)
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.main-nav')) {
-        document.querySelectorAll('.main-nav .open').forEach(el=>el.classList.remove('open'));
-      }
-    });
+    (function(){
+      const navToggle = document.querySelector('.nav-toggle') || document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      navToggle && navToggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open);
+      });
+
+      // submenus
+      document.querySelectorAll('.has-sub .sub-toggle').forEach(btn=>{
+        btn.addEventListener('click', (e)=>{
+          const parent = btn.closest('.has-sub');
+          const open = parent.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open);
+        });
+      });
+
+      // keyboard: Escape closes nav/subs
+      document.addEventListener('keydown', (e)=>{
+        if(e.key === 'Escape') {
+          document.querySelectorAll('.nav.open, .has-sub.open').forEach(el=>el.classList.remove('open'));
+          document.querySelectorAll('.sub-toggle').forEach(b=>b.setAttribute('aria-expanded', false));
+        }
+      });
+    })();
   </script>
 </body>
 </html>
