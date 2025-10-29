@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function(){
       nav.classList.toggle('show');
     });
 
-    document.addEventListener('click', (e)=>{
+    document.addEventListener('click', (e)=> {
+      // fecha menu se clicou fora
       if (!nav.contains(e.target) && !btn.contains(e.target)){
         nav.classList.remove('show');
       }
